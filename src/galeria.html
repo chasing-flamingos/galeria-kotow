@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Galeria z najlepszymi zdjęciami kotów.">
+    <title>Najlepsza galeria zdjęć</title>
+    <link href="css/galeria.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <h1>Galeria kotów</h1>
+    </header>
+    <main>
+      <div class="container">
+        <div class="row">
+          <img class="myImg" src="galeria_foto/kot1.jpeg">
+          <img class="myImg" src="galeria_foto/kot2.jpg">
+          <img class="myImg" src="galeria_foto/kot3.jpg">
+        </div>
+        <div class="row">
+          <img class="myImg" src="galeria_foto/kot4.jpeg">
+          <img class="myImg" src="galeria_foto/kot5.jpg">
+          <img class="myImg" src="galeria_foto/kot6.JPG">
+        </div>
+        <div class="row">
+          <img class="myImg" src="galeria_foto/kot7.jpeg">
+          <img class="myImg" src="galeria_foto/kot8.jpg">
+          <img class="myImg" src="galeria_foto/kot9.jpg">
+        </div>
+        <div id='myModal' class="modal">
+          <span class="close">&times;</span>
+          <img id="myModalImg" class="modal-content">
+          <a class="prev" onclick="handlePrev()">&#10094;</a>
+          <a class="next" id="nextImg" onclick="handleNext()">&#10095;</a>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p>&copy; 2019 Koty</p>
+    </footer>
+    <script type="text/javascript" src="scripts/galeria.js"></script>
+  </body>
+</html>
