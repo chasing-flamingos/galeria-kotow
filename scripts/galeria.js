@@ -14,7 +14,7 @@ function handleClick(event) {
     }
   }
 
-  modalContent.src = img.src;
+  modalContent.setAttribute('src', img.getAttribute('src'));
   modal.style.display = "block";
 }
 
@@ -30,13 +30,13 @@ span.onclick = function() {
 function handleNext() {
   currentIndex = currentIndex < imgs.length - 1 ? currentIndex + 1 : 0;
   var next = imgs[currentIndex];
-  modalContent.src = next.src;
+  modalContent.setAttribute('src', next.getAttribute('src'));
 }
 
 function handlePrev() {
   currentIndex = currentIndex > 0 ? currentIndex - 1 : imgs.length - 1;
   var prev = imgs[currentIndex];
-  modalContent.src = prev.src;
+  modalContent.setAttribute('src', prev.getAttribute('src'));
 }
 
 document.addEventListener('keydown', function(event) {
