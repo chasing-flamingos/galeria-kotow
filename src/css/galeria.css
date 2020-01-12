@@ -57,6 +57,12 @@ img {
     animation-duration: 0.6s;
 }
 
+#description {
+  text-align: center;
+  color: white;
+  font-size: 25px;
+}
+
 
 @keyframes zoom {
   from {transform:scale(0)} 
