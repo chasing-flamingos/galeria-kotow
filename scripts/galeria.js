@@ -1,6 +1,7 @@
 var modal = document.getElementById('myModal');
 var imgs = document.getElementsByClassName('myImg');
 var modalContent = document.getElementById('myModalImg');
+var description = document.getElementById('description');
 
 var currentIndex = 0;
 
@@ -15,6 +16,7 @@ function handleClick(event) {
   }
 
   modalContent.setAttribute('src', img.getAttribute('src'));
+  description.innerHTML = img.dataset.description;
   modal.style.display = "block";
 }
 
@@ -31,12 +33,14 @@ function handleNext() {
   currentIndex = currentIndex < imgs.length - 1 ? currentIndex + 1 : 0;
   var next = imgs[currentIndex];
   modalContent.setAttribute('src', next.getAttribute('src'));
+  description.innerHTML = next.dataset.description;
 }
 
 function handlePrev() {
   currentIndex = currentIndex > 0 ? currentIndex - 1 : imgs.length - 1;
   var prev = imgs[currentIndex];
   modalContent.setAttribute('src', prev.getAttribute('src'));
+  description.innerHTML = prev.dataset.description;
 }
 
 document.addEventListener('keydown', function(event) {
